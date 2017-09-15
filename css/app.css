@@ -1,8 +1,11 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
 /*** HERO SECTION ***/
 .hero-section {
-  background: url("https://static.pexels.com/photos/3276/screen-print.jpg") 50% no-repeat;
+  background: url("../img/screenprinting-bw-paint.jpg") 50% no-repeat;
   background-size: cover;
-  height: 60vh;
+  min-height: 50vh;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,3 +25,41 @@
     margin: 0 auto;
 }
 
+.hero-section .hero-title{
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    color: darkred;
+}
+
+.hero-section .hero-description{
+    font-family: "Roboto Slab", serif;
+}
+.content-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+.locations-section{
+    text-align: center;
+}
+.locations-section .location-title {
+    font-size:  1.5rem;
+    font-weight: 700;
+    font-family: 'Exo 2', sans-serif;
+    color: navy;
+}
+
+p.location-address {
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 1.6rem;
+    margin: .4rem;
+}
+
+p.location-phone{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
