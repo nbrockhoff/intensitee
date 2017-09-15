@@ -1,11 +1,11 @@
 $(document).foundation() {
-    $('.form-floating-label input, .form-floating-label textarea').focusin(function () {
-        $(this).parent().addClass('has-value');
-    });
+  $('.variable-width').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true
+});
 
-    $('.form-floating-label input, .form-floating-label textarea').blur(function () {
-        if (!$(this).val().length > 0) {
-            $(this).parent().removeClass('has-value');
-        }
-    });
 }
