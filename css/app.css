@@ -4,34 +4,36 @@
 
 h1 {
     color: #E6001A;
-    
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+
 /*** HERO SECTION ***/
+
 .hero-section {
-  background: url("../img/screenprinting-bw-paint.jpg") 50% no-repeat;
-  background-size: cover;
-  min-height: 50vh;
-  text-align: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    background: url("../img/screenprinting-bw-paint.jpg") 50% no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .hero-section .hero-section-text {
-  color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
     max-width: 80%;
     margin: 0 auto;
 }
 
-.hero-section .hero-title{
+.hero-section .hero-title {
     font-family: 'Exo 2', sans-serif;
     font-style: italic;
     font-weight: bold;
@@ -40,17 +42,20 @@ h1 {
     color: #E6001A;
 }
 
-.hero-section .hero-description{
+.hero-section .hero-description {
     font-family: "Roboto Slab", serif;
 }
+
 .content-container {
     max-width: 80%;
     margin: 0 auto;
     display: block;
 }
 
+
 /*** LOCATIONS SECTION ***/
-.locations-section{
+
+.locations-section {
     margin-top: 2rem;
     text-align: center;
 }
@@ -62,8 +67,9 @@ h1 {
     font-weight: 100;
     font-size: 2.2rem;
 }
+
 .locations-section .location-title {
-    font-size:  1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Exo 2', sans-serif;
     color: midnightblue;
@@ -76,12 +82,12 @@ p.location-address {
     margin: .4rem;
 }
 
-p.location-phone{
+p.location-phone {
     font-weight: 700;
     font-size: 1.2rem;
 }
 
-.locations-section .location{
+.locations-section .location {
     margin: 1rem;
 }
 
@@ -90,7 +96,9 @@ p.location-phone{
     margin: 0 auto;
 }
 
+
 /*** SERVICES SECTION ***/
+
 .services-section {
     background-color: #efefef;
     color: black;
@@ -98,11 +106,12 @@ p.location-phone{
     margin: 2rem 0;
     padding: 2rem;
 }
+
 .services-section .service {
     padding: 1rem 1rem 0 1rem;
 }
 
-.services-section .section-header h1{
+.services-section .section-header h1 {
     font-family: 'Roboto Slab', sans-serif;
     font-style: italic;
     text-align: center;
@@ -118,52 +127,86 @@ p.location-phone{
     color: #E6001A;
 }
 
-.services-section .service .description p{
+.services-section .service .description p {
     font-weight: 300;
 }
 
-/** Recent Work Gallery ***/
-.example-gallery {
-}
 
-.example-gallery img{
+/** Recent Work Gallery ***/
+
+.example-gallery {}
+
+.example-gallery img {
     max-height: 300px;
     padding: 10px;
 }
 
+
 /*** Contact Form ***/
 
 .floated-label-wrapper {
-  position: relative;
+    position: relative;
 }
 
 .floated-label-wrapper label {
-  background: #fefefe;
-  color: #1779ba;
-  font-size: 0.75rem;
-  font-weight: 600;
-  left: 0.75rem;
-  opacity: 0;
-  padding: 0 0.25rem;
-  position: absolute;
-  top: 2rem;
-  transition: all 0.15s ease-in;
-  z-index: -1;
+    background: #fefefe;
+    color: #1779ba;
+    font-size: 0.75rem;
+    font-weight: 600;
+    left: 0.75rem;
+    opacity: 0;
+    padding: 0 0.25rem;
+    position: absolute;
+    top: 2rem;
+    transition: all 0.15s ease-in;
+    z-index: -1;
 }
 
 .floated-label-wrapper label input[type=text],
 .floated-label-wrapper label input[type=email],
 .floated-label-wrapper label input[type=password] {
-  border-radius: 4px;
-  font-size: 1.75em;
-  padding: 0.5em;
+    border-radius: 4px;
+    font-size: 1.75em;
+    padding: 0.5em;
 }
 
 .floated-label-wrapper label.show {
-  opacity: 1;
-  top: -0.85rem;
-  z-index: 1;
-  transition: all 0.15s ease-in;
+    opacity: 1;
+    top: -0.85rem;
+    z-index: 1;
+    transition: all 0.15s ease-in;
 }
 
+#contact {
+    padding: 10px 0 10px;
+}
 
+.contact-text {
+    margin: 45px auto;
+}
+
+.mail-message-area {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.mail-message {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) !important;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+.not-visible-message {
+    height: 0px;
+    opacity: 0;
+}
+
+.visible-message {
+    height: auto;
+    opacity: 1;
+    margin: 25px auto 0;
+}
