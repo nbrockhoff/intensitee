@@ -16,7 +16,7 @@ require_once 'inc/email.class.php';
       $contactMsgErrorMsg;
       $valid;
       $formDisplay;
-      $emailBody=$contactMsg;
+      $emailBody;
 
 
         if (empty(trim($contactName))==true){
@@ -55,10 +55,11 @@ require_once 'inc/email.class.php';
 
       if($valid==true){
           $formDisplay = "hide-form";
-          $successMsg = "Success! Your form has been submitted.";
+          $statusMsg = "Success! Your form has been submitted.";
           // echo "Made it past success";
+          date_default_timezone_set('America/Chicago');
           $submitTimestamp = date("M j, Y H:i:s");
-          $formSubmitTime = date("H:i:s");
+          $formSubmitTime = date("g:i:s A");
           $formSubmitDate = date("m/d/Y");
 
         
@@ -68,11 +69,10 @@ require_once 'inc/email.class.php';
 
          // echo "<br>Made it past timestamp";
 
-          $emailBody .=  "Name: ".$contactName."\r\n";
-        $emailBody .=  "Your Email: ".$contactEmail."\r\n";
-        $emailBody .=  "Phone: ".$contactPhone."\r\n";
-        $emailBody .=  "Message: ".$emailBody."\r\n";
-        $emailBody.=  "Submitted: ".$submitTimestamp." GMT \r\n";
+          $emailBody .=  "\r\nName: ".$contactName."\r\n";
+          $emailBody .=  "Phone: ".$contactPhone."\r\n";
+          $emailBody .= "Message: ".$contactMsg."\r\n";
+          $emailBody .=  "Submitted: ".$submitTimestamp." \r\n";
 
          // echo "<br>Made it past submitted data";
           
@@ -89,8 +89,7 @@ require_once 'inc/email.class.php';
          // echo "Made it past sendEmail";
           
         } else {
-          $errorMsg = "We're sorry - the form did not submit. Please fill out all fields.";
+          $statusMsg = "We're sorry - the form did not submit. Please fill out all fields.";
         };
       };
-      require_once('tpl/contact.tpl.php'); 
    ?>

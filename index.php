@@ -81,43 +81,46 @@
                             <h1>Send Us a Message</h1>
                         </div>
                         <!-- contact form -->
-                        <form id="contact-us" class="contact-form" method="POST" action="contact.php">
+                        <form id="contact-form" class="contact-form" method="post" action="mailer.php">
 
-                            <div class="session-message">
-                                <h3>
-                                    <?php echo ($_SESSION['sessionMessage']);?>
-                                </h3>
-                                <h3>
-                                    <?php echo $successMsg;?>
-                                </h3>
-                                <h3>
-                                    <?php echo $errorMsg;?>
-                                </h3>
-                                
+
+                            <div class="error">
+                                <?php echo $contactNameErrorMsg;?>
                             </div>
-
                             <div class="floated-label-wrapper">
-                               <?php echo $contactNameErrorMsg;?>
                                 <label for="contactName">Your Name</label>
                                 <input type="text" id="contactName" name="contactName" placeholder="Your Name" value="<?php echo $contactName ?>">
                             </div>
+                            <div class="error">
+                                <?php echo $contactErrorMsg;?>
+                            </div>
                             <div class="floated-label-wrapper">
-                               <?php echo $contactErrorMsg;?>
                                 <label for="contactEmail">Your Email</label>
                                 <input type="text" id="contactEmail" name="contactEmail" placeholder="Your Email" value="<?php echo $contactEmail; ?>">
                             </div>
+                            <div class="error">
+                                <?php echo $contactPhoneErrorMsg;?>
+                            </div>
                             <div class="floated-label-wrapper">
-                               <?php echo $contactPhoneErrorMsg;?>
                                 <label for="contactPhone">Your Phone Number</label>
                                 <input type="tel" id="contactPhone" name="contactPhone" placeholder="Phone Number" value="<?php $contactPhone ?>">
                             </div>
+                            <div class="error">
+                                <?php echo $contactMsgErrorMsg;?>
+                            </div>
                             <div class="floated-label-wrapper">
-                               <?php echo $contactMsgErrorMsg;?>
                                 <textarea name="contactMsg" id="contactMsg" class="form textarea" placeholder="Your Message"><?php echo $contactMsg; ?></textarea>
                                 <input type="submit" id="submit" name="submit" class="button expanded" value="Send Message">
                             </div>
                         </form>
-
+                        <div class="session-message">
+                            <h3>
+                                <?php 
+			             echo ($_SESSION['emailStatus']);
+			             $_SESSION['emailStatus']=""
+			             ?>
+                            </h3>
+                        </div>
 
                     </div>
                 </div>

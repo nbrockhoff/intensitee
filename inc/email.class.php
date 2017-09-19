@@ -30,10 +30,10 @@
       $contactCommentsErrorMsg;
       $valid;
       $formDisplay;
-      $emailBody ="Name: ".$contactName."<br>";
-      $emailBody.="Email: ".$contactEmail."<br>";
-      $emailBody.="Phone: ".$contactPhone."<br>";
-      $emailBody.="Message:".$contactMsg;
+      //$emailBody ="Name: ".$contactName."<br>";
+      //$emailBody.="Email: ".$contactEmail."<br>";
+      //$emailBody.="Phone: ".$contactPhone."<br>";
+      //$emailBody.="Message:".$contactMsg;
 
 
         if (empty(trim($contactName))==true){
@@ -107,7 +107,7 @@
 		function set_body(){
 		$this->body .= "To: ".$this->sendTo."\r\n";
 		$this->body .= "From: ".$this->sendFrom."\r\n";
-		$this->body .="Message: ".$this->message;
+		$this->body .= $this->message;
 		}
 
 		function get_body(){
