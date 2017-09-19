@@ -113,7 +113,7 @@
                                 <input type="submit" id="submit" name="submit" class="button expanded" value="Send Message">
                             </div>
                         </form>
-                        <div class="session-message">
+                        <div class="email-status">
                             <h3>
                                 <?php 
 			             echo ($_SESSION['emailStatus']);
