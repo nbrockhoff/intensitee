@@ -37,51 +37,19 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
+    //$(function () {
+        var showClass = 'show';
+
+        $('input').on('checkval', function () {
+            var label = $(this).prev('label');
+            if (this.value !== '') {
+                label.addClass(showClass);
+            } else {
+                label.removeClass(showClass);
+            }
+        }).on('keyup', function () {
+            $(this).trigger('checkval');
+        });
+   // });
+
 });
-
-    function sendContact() {
-        var valid;
-        valid = validateContact();
-        if (valid) {
-            jQuery.ajax({
-                url: "mailer.php",
-                data: '&contactName=' + $("#contactName").val() + '&contactEmail=' +
-                    $("#contactEmail").val() + '&phone=' +
-                    $("#contactPhone").val() + '&message=' +
-                    $('#contactMsg').val(),
-                type: "POST",
-                success: function (data) {
-                    $("#mail-status").html(data);
-                },
-                error: function () {}
-            });
-        }
-    }
-
-    function validateContact() {
-        var valid = true;
-        $(".demoInputBox").css('background-color', '');
-        $(".info").html('');
-        if (!$("#contactName").val()) {
-            $("#contactNameErrorMsg").html("(required)");
-            $("#contactName").css('background-color', '#FFFFDF');
-            valid = false;
-        }
-        if (!$("#contactEmail").val()) {
-            $("#contactEmailErrorMsg").html("(required)");
-            $("#contactEmail").css('background-color', '#FFFFDF');
-            valid = false;
-        }
-        if (!$("#contactEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-            $("#contactEmailErrorMsg").html("(invalid)");
-            $("#contactEmail").css('background-color', '#FFFFDF');
-            valid = false;
-        }
-
-        if (!$("#contactMsg").val()) {
-            $("#contactMsgErrorMsg").html("(required)");
-            $("#contactMsg").css('background-color', '#FFFFDF');
-            valid = false;
-        }
-        return valid;
-    }
