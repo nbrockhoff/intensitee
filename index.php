@@ -24,16 +24,16 @@
         </div>
     </div>
     <div class="example-gallery">
-        <div><img src="img/gallery/awards-case.jpeg"></div>
-        <div><img src="img/gallery/bad-to-the-boone.jpg"></div>
-        <div><img src="img/gallery/boone-golf.jpg"></div>
-        <div><img src="img/gallery/design-wall.jpg"></div>
-        <div><img src="img/gallery/fdny-racing.jpg"></div>
-        <div><img src="img/gallery/hat-examples.jpg"></div>
-        <div><img src="img/gallery/isu-mailbox.jpg"></div>
-        <div><img src="img/gallery/shirt-colors.jpg"></div>
+        <div><img srcset="img/gallery/awards-case-2x.jpeg 974w, img/gallery/awards-case-1x.jpeg 525w"></div>
+        <div><img src="img/gallery/bad-to-the-boone-2x.jpg"></div>
+        <div><img srcset="img/gallery/boone-golf-2x.jpg 993w, img/gallery/boone-golf-1x.jpg 579w"></div>
+        <div><img srcset="img/gallery/design-wall-2x.jpg 975w, img/gallery/design-wall-1x.jpg 525w"></div>
+        <div><img srcset="img/gallery/fdny-racing-2x.jpg 464w, img/gallery/fdny-racing-1x.jpg 249w,"></div>
+        <div><img srcset="img/gallery/hat-examples-2x.jpg 900w, img/gallery/hat-examples-1x.jpg 525w"></div>
+        <div><img srcset="img/gallery/isu-mailbox.jpg-2x 923w, img/gallery/isu-mailbox.jpg-1x 505w"></div>
+        <div><img srcset="img/gallery/shirt-colors-2x.jpg 974w, img/gallery/shirt-colors-2x.jpg 525w"></div>
         <div><img src="img/gallery/toreador-playoffs.jpg"></div>
-        <div><img src="img/gallery/we-wear-pink.jpeg"></div>
+        <div><img srcset="img/gallery/we-wear-pink-2x.jpg 975w, img/gallery/we-wear-pink.jpg 525w"></div>
     </div>
     <div class="content-container">
         <div class="grid-container">
